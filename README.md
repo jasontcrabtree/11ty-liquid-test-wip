@@ -2,7 +2,7 @@
 
 This is a small, focused Eleventy Quickstart boilerplate I built for myself to use for future Eleventy projects. The focus is on approachable HTML, CSS, JS and Using Liquid for Components-style set-up and Templating.
 
-SEO and Meta information is pre-templated in the `metadata.json` file, templated into `meta.html`.
+SEO and Meta information is pre-templated in the `metadata.json` file, templated into `meta.liquid`.
 
 Fie CSS files split into design elements and combined into theme.css at build time.
 

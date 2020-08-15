@@ -1,9 +1,11 @@
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('./src/static');
-  eleventyConfig.addPassthroughCopy('./src/_redirects');
-  eleventyConfig.addPassthroughCopy('./src/_headers');
-  
-    eleventyConfig.addCollection('blog', (collection) => {
+  eleventyConfig.addPassthroughCopy('./src/_static');
+  // Config files > redirected from config folder to src on build
+  eleventyConfig.addPassthroughCopy({
+    'src/config': './',
+  });
+
+  eleventyConfig.addCollection('blog', collection => {
     return collection.getFilteredByGlob('src/blog/*.md');
   });
 
@@ -14,7 +16,7 @@ module.exports = function(eleventyConfig) {
       includes: 'includes',
       data: '_data',
     },
-    templateFormats: ['html', 'md', 'liquid', 'css'],
+    templateFormats: ['liquid', 'html', 'css', 'md'],
     htmlTemplateEngine: 'liquid',
     markdownTemplateEngine: 'liquid',
     passThroughFileCopy: true,
