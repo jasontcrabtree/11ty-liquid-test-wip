@@ -5,5 +5,9 @@ html {
 }
 
 h1 {
-  font-size: calc(16px + 2vmin);
+  font-size: calc(16px + 3vmin);
+}
+
+.header--layout > h1 {
+  text-align: center;
 }
